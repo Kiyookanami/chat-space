@@ -14,8 +14,10 @@
 
 |column|Type|Options|
 |------|----|-------|
-|text  |text|foreign_key: true|
-|image |text|foreign_key: true|
+|text  |text||
+|image |text||
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 ###Association
 - belongs_to :user
 - belongs_to :group
@@ -36,7 +38,7 @@
 |group|references|null: false, foreign_key: true|
 ###Association
 - belongs_to :user
-- belongs_to :new_group
+- belongs_to :group
 
 
 
