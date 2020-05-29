@@ -1,0 +1,260 @@
+* {
+  box-sizing: border-box;
+  }
+  $white:#ffffff;
+  $gray:#253141;
+  $blue:#38aef0;
+  @mixin form {
+    width: calc( 100vw - 300px );
+  }
+
+  .post-side {
+    width: 300px;
+    height: 100vh;
+    background-color: #2f3e51; 
+
+    &__header {
+      width: 300px;
+      height: 100px; 
+      background: $gray;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+    } 
+
+    &__header__box {
+      width: 260px; 
+      height: 20px;
+      background: $gray;
+      display: flex;
+      justify-content: space-between;
+      line-height: 20px;
+      text-align: right;
+    }
+
+    &__header__box__name {
+      color: $white;
+      font-size: 16px;
+    }
+
+    &__header__box__menu {
+      width: 60px;
+      display: flex;
+      justify-content: flex-end;
+      li {
+       margin: 0 2.5px 0; 
+      }  
+    }
+    i {
+      color: $white;
+    }
+    a {
+      text-decoration: none;
+    }
+
+    .groups {
+      height: calc( 100vh - 100px ); 
+      padding: 20px 20px 0;
+      
+  
+    &__group {
+        width: 260px;
+        height: 45px;
+        margin-bottom: 40px;
+    }
+
+    &__group-name {
+      margin-bottom: 5px;
+      font-size: 15px;
+      color: $white;
+    }
+
+    &__display-message {
+      font-size: 11px;
+      color: $white;
+    }
+
+  }
+
+  }
+
+  
+  .post-main {
+    @include form;
+    height: 100vh;
+    background:$white;
+  
+    &__header {
+      height: 100px;
+      border-bottom: 1px solid #eeeeee;
+      padding: 0 40px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+      &__header__left {
+        width: 100px;
+        margin-top: 18px;
+      }
+
+      .h2 {
+        color: #333333;
+        font-size: 20px;
+        margin-top: 20px;
+      }
+
+      &__header__left__menber {
+        margin-top: 20px;
+        color: #999999;
+        font-size: 12px;
+
+      }
+
+      &__header__edit-btn {
+        width: 72px;
+        height: 40px;
+        margin-top: 30px;
+        border: 1px solid $blue;
+        color: $blue;
+        font-size: 16px;
+        padding: 0 20px 0;
+        line-height: 40px;
+        a {
+          text-decoration: none;
+          color: $blue;
+        }
+      }
+
+      &__messages {
+        @include form;
+        height: calc( 100vh - 190px);
+        background-color: #fafafa;
+        padding: 45px 40px;
+      }
+
+      &__messages__message {
+        height: 60px;
+        margin-bottom: 45px;
+      }
+
+      &__messages__message__info {
+        height: 25px;
+        display: flex;
+        justify-content: left;
+        margin-bottom: 12px;
+      }
+
+      &__messages__message__contents {
+        height: 25px;
+        display: flex;
+        justify-content: left;
+      }
+
+      &__messages__message__contents__info {
+        color: #434A54;
+        font-size: 14px;
+      }
+
+      &__messages__message__user {
+        color: #333333;
+        font-size: 16px;
+        margin-right: 5px;
+      }
+      &__messages__message__date {
+        color: #999999;
+        font-size: 12px;
+      }
+
+      &__form {
+        @include form;
+        height: 90px;
+        background-color: #d2d2d2;
+        padding: 20px 40px;
+        
+        form {
+          display: flex;
+          .input-box {
+            width: 100%;
+            position: relative;
+            &-text {
+              width: 100%;
+              height: 50px;
+              padding: 0 40px 0 10px;
+            }
+
+            &-label {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              &__file {
+                display: none;
+              }
+            }
+          }
+
+          .input-submit {
+            width: 100px;
+            height: 50px;
+            margin-left: 15px;
+            color: $white;
+            background-color: $blue;
+          }
+        }
+      }
+  }
+
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+ 
+  
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
