@@ -1,0 +1,29 @@
+.post-main
+  .post-main__header
+    .post-main__header__left
+      %h2.post-main__header__left
+        nami
+      .menber
+      %ul.post-main__header__left__menber
+        Member : nami
+    .post-main__header__edit-btn
+      = link_to "#" do
+        Edit
+  .post-main__messages
+    .post-main__messages__message
+      .post-main__messages__message__info
+        %p.post-main__messages__message__user
+          こんにちは
+        %p.post-main__messages__message__date 
+          2020/05/18(Mon)00:00:00
+      .post-main__messages__message__contents 
+        %p.post-main__messages__message__contents__info
+          test
+  .post-main__form
+    %form.new_message
+      .input-box
+        %input.input-box-text{:name   => "text", :placeholder   => "type a message",  :type => "text", :value  => ""}/
+        %label.input-box-label
+          =icon('fas','image')
+          %input.input-box-label__file{type: "file"}
+      %input.input-submit{:name => "commit", :type => "submit",:value => "send" }
