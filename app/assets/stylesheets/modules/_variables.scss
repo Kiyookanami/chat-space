@@ -1,0 +1,9 @@
+$white:#ffffff;
+$dark-gray:#253141;
+$gray: #2f3e51;
+$off-white: #fafafa;
+$blue:#38aef0;
+$white-gray: #d2d2d2;
+@mixin form {
+  width: calc( 100vw - 300px );
+}

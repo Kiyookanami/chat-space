@@ -1,22 +1,16 @@
 * {
   box-sizing: border-box;
   }
-  $white:#ffffff;
-  $gray:#253141;
-  $blue:#38aef0;
-  @mixin form {
-    width: calc( 100vw - 300px );
-  }
 
   .post-side {
     width: 300px;
     height: 100vh;
-    background-color: #2f3e51; 
-
+    background: $gray; 
+    
     &__header {
       width: 300px;
       height: 100px; 
-      background: $gray;
+      background: $dark-gray;
       display: flex;
       justify-content: center;
       align-items: center; 
@@ -25,7 +19,7 @@
     &__header__box {
       width: 260px; 
       height: 20px;
-      background: $gray;
+      background: $dark-gray;
       display: flex;
       justify-content: space-between;
       line-height: 20px;
@@ -82,7 +76,7 @@
   .post-main {
     @include form;
     height: 100vh;
-    background:$white;
+    background-color: $white;
   
     &__header {
       height: 100px;
@@ -128,7 +122,7 @@
       &__messages {
         @include form;
         height: calc( 100vh - 190px);
-        background-color: #fafafa;
+        background: $off-white;
         padding: 45px 40px;
       }
 
@@ -168,7 +162,7 @@
       &__form {
         @include form;
         height: 90px;
-        background-color: #d2d2d2;
+        background: $white-gray;
         padding: 20px 40px;
         
         form {
@@ -197,7 +191,7 @@
             height: 50px;
             margin-left: 15px;
             color: $white;
-            background-color: $blue;
+            background: $blue;
           }
         }
       }
