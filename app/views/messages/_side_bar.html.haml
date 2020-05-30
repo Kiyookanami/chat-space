@@ -3,14 +3,14 @@
     .post-side__header__box
       .names
         %p.post-side__header__box__name
-          なみ
+          = current_user.nickname
       .menus
         %ul.post-side__header__box__menu
           %li.post-side__header__box__menu__new-group
             = link_to "#" do
               = icon('far', 'edit')
           %li.post-side__header__box__menu__edit-user
-            = link_to "#" do
+            = link_to edit_user_path(current_user) do
               = icon('fa','cog')
   .groups
     %a(href = '#')
