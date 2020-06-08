@@ -57,6 +57,10 @@
         margin-bottom: 40px;
     }
 
+    a{
+      color: white
+    }
+
     &__group-name {
       margin-bottom: 5px;
       font-size: 15px;
@@ -84,47 +88,47 @@
       padding: 0 40px;
       display: flex;
       justify-content: space-between;
-    }
 
-      &__header__left {
+      &__left {
         width: 100px;
         margin-top: 18px;
-      }
 
-      .h2 {
-        color: #333333;
-        font-size: 20px;
-        margin-top: 20px;
-      }
+        .h2 {
+          color: #333333;
+          font-size: 20px;
+          margin-top: 20px;
+        }
 
-      &__header__left__menber {
-        margin-top: 20px;
-        color: #999999;
-        font-size: 12px;
-
-      }
-
-      &__header__edit-btn {
-        width: 72px;
-        height: 40px;
-        margin-top: 30px;
-        border: 1px solid $blue;
-        color: $blue;
-        font-size: 16px;
-        padding: 0 20px 0;
-        line-height: 40px;
-        a {
-          text-decoration: none;
-          color: $blue;
+        &__menber {
+          margin-top: 20px;
+          color: #999999;
+          font-size: 12px;
         }
       }
-
-      &__messages {
-        @include form;
-        height: calc( 100vh - 190px);
-        background: $off-white;
-        padding: 45px 40px;
+      &__right {
+        width: 100px;
+        margin-top: 18px;
+        &__edit-btn {
+          border: 1px solid $light_blue;
+          color: $light_blue;
+          float: right;
+          height: 40px;
+          line-height: 40px;
+          margin-top: 12px;
+          padding: 0 20px;
+          a {
+            text-decoration: none;
+            color: $light_blue;
+          }
+        }
       }
+    }
+    &__messages {
+      @include form;
+      height: calc( 100vh - 190px);
+      background: $off-white;
+      padding: 45px 40px;
+    }
 
       &__messages__message {
         height: 60px;

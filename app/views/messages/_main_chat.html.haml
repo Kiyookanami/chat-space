@@ -2,13 +2,14 @@
   .post-main__header
     .post-main__header__left
       %h2.post-main__header__left
-        nami
-      .menber
+        = @group.name
+    .menber
       %ul.post-main__header__left__menber
-        Member : nami
-    .post-main__header__edit-btn
-      = link_to "#" do
-        Edit
+        - @group.users.each do |user|
+          = user
+    .post-main__header__right
+      .post-main__header__right__edit-btn
+        = link_to "Edit", edit_group_path(@group.id)
   .post-main__messages
     .post-main__messages__message
       .post-main__messages__message__info
@@ -26,4 +27,4 @@
         %label.input-box-label
           =icon('fas','image')
           %input.input-box-label__file{type: "file"}
-      %input.input-submit{:name => "commit", :type => "submit",:value => "send" }
+      %input.input-submit{:name => "commit", :type => "submit",:value => "send"}
