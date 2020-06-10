@@ -3,10 +3,12 @@
     .post-main__header__left
       %h2.post-main__header__left
         = @group.name
-    .menber
       %ul.post-main__header__left__menber
-        - @group.users.each do |user|
-          = user
+        %li.Menber
+          Menber:
+        %li.nickname
+          -@group.users.each do |user|
+            = user.nickname
     .post-main__header__right
       .post-main__header__right__edit-btn
         = link_to "Edit", edit_group_path(@group.id)
