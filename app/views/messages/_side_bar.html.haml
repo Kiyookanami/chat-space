@@ -3,19 +3,20 @@
     .post-side__header__box
       .names
         %p.post-side__header__box__name
-          なみ
+          = current_user.nickname
       .menus
         %ul.post-side__header__box__menu
           %li.post-side__header__box__menu__new-group
-            = link_to "#" do
+            = link_to new_group_path do
               = icon('far', 'edit')
           %li.post-side__header__box__menu__edit-user
-            = link_to "#" do
+            = link_to edit_user_path(current_user) do
               = icon('fa','cog')
   .groups
-    %a(href = '#')
-      .groups__group
-        %p.groups__group-name
-          なみ
-        %p.groups__display-message
-          messege
+    - current_user.groups.each do |group|
+      .group
+        = link_to group_messages_path(group) do
+          .group__name
+            = group.name
+          .group__message
+            = group.show_last_message
