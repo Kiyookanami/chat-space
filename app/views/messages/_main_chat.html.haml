@@ -15,10 +15,11 @@
   .post-main__messages
     = render @messages
   .post-main__form
-    = form_for [@group, @message] do |f|
-      = f.text_field :text, class: 'form__message', placeholder: 'type a message'
+    = form_for [@group, @message] ,html:{class:"new_message"} do |f|
       .input-box
-        = f.label :image, class: 'input-box__image' do
+        = f.text_field :text, class: 'input-box-text', placeholder: 'type a message'
+        = f.label :image, class: 'input-box-label' do
           = icon('fas', 'image', class: 'icon')
           = f.file_field :image, class: 'hidden'
       =f.submit 'send', class: 'form__submit'
+      
