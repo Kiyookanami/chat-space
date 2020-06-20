@@ -1,25 +1,12 @@
-.post-main
-  .post-main__header
-    .post-main__header__left
-      %h2.post-main__header__left
-        = @group.name
-      %ul.post-main__header__left__menber
-        %li.Menber
-          Menber:
-        %li.nickname
-          -@group.users.each do |user|
-            = user.nickname
-    .post-main__header__right
-      .post-main__header__right__edit-btn
-        = link_to "Edit", edit_group_path(@group.id)
-  .post-main__messages
-    = render @messages
-  .post-main__form
-    = form_for [@group, @message] ,html:{class:"new_message"} do |f|
-      .input-box
-        = f.text_field :text, class: 'input-box-text', placeholder: 'type a message'
-        = f.label :image, class: 'input-box-label' do
-          = icon('fas', 'image', class: 'icon')
-          = f.file_field :image, class: 'hidden'
-      =f.submit 'send', class: 'form__submit'
+.post-main__messages__message
+  .post-main__messages__message__info
+    .post-main__messages__message__user
+      = message.user.nickname
+    .post-main__messages__message__date
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .lower-message
+    - if message.text.present?
+      %p.lower-message__text
+        = message.text
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
 
