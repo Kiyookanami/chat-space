@@ -57,7 +57,6 @@ $(function(){
         $('form')[0].reset();
         $('.post-main__messages').animate({ scrollTop: $('.post-main__messages')[0].scrollHeight });
         $('.form__submit').prop('disabled', false);
-        console.log("hoge")
       })
       .fail(function(){
            alert("メッセージ送信に失敗しました");
