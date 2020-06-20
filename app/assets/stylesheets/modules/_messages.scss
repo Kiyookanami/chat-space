@@ -129,6 +129,7 @@
       height: calc( 100vh - 190px);
       background: $off-white;
       padding: 45px 40px;
+      overflow:auto;
     }
 
       &__messages__message {
