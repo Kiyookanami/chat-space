@@ -1,12 +1,13 @@
 .post-main__messages__message
-  .post-main__messages__message__info
-    .post-main__messages__message__user
-      = message.user.nickname
-    .post-main__messages__message__date
-      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
-  .lower-message
-    - if message.text.present?
-      %p.lower-message__text
-        = message.text
-    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+  .message{data: {message: {id: message.id}}}
+    .post-main__messages__message__info
+      .post-main__messages__message__user
+        = message.user.nickname
+      .post-main__messages__message__date
+        = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+    .lower-message
+      - if message.text.present?
+        %p.lower-message__text
+          = message.text
+      = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
 
