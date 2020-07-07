@@ -64,7 +64,7 @@ $('#new_message').on('submit', function(e){
 });
 
 var reloadMessages = function() {
-  var last_message_id = $('.message:last').data("message-id");
+  var last_message_id = $('.post-main__messages__message:last').data("message-id");
   $.ajax({
     url: "api/messages",
     type: 'get',
@@ -77,8 +77,8 @@ var reloadMessages = function() {
       $.each(messages, function(i,message) {
         insertHTML += buildHTML(message)
       });
-      $('.messages').append(insertHTML);
-      $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+      $('.post-main__messages').append(insertHTML);
+      $('.post-main__messages').animate({ scrollTop: $('.post-main__messages')[0].scrollHeight});
     }
   })
   .fail(function() {
