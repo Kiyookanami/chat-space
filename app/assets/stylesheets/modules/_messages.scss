@@ -29,6 +29,7 @@
     &__header__box__name {
       color: $white;
       font-size: 16px;
+      font-weight: bold;
     }
 
     &__header__box__menu {
@@ -67,7 +68,7 @@
       color: $white;
     }
 
-    &__display-message {
+    &__group__message {
       font-size: 11px;
       color: $white;
     }
