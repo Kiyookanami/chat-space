@@ -55,7 +55,7 @@ $('#new_message').on('submit', function(e){
      var html = buildHTML(data);
      $('.post-main__messages').append(html);
      $('form')[0].reset();
-     $('.post-main__messages').animate({ scrollTop: $('.post-main__messages')[0].scrollHeight });
+     $('.post-main__messages').animate({ scrollTop: $('.post-main__messages')[0].scrollHeight});
      $('.form__submit').prop('disabled', false);
    })
    .fail(function(){
