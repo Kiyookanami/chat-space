@@ -3,7 +3,7 @@ $(function() {
     let html = `
       <div class="chat-group-user clearfix">
         <p class="chat-group-user__name">${user.nickname}</p>
-        <a class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${user.id}" data-user-name="${user.nickname}">追加</div>
+        <a class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${user.id}" data-user-name="${user.nickname}">追加</a>
       </div>
     `;
     $("#user-search-result").append(html);
@@ -21,8 +21,9 @@ $(function() {
     let html = `
     <div class="chat-group-user clearfix" id="${id}">
       <p class="chat-group-user__name">${nickname}</p>
-      <a class="user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn" data-user-id="${id}" data-user-name="${nickname}">削除</div>
-    </div>`;
+      <a class="user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn" data-user-id="${id}" data-user-name="${nickname}">削除</a>
+    </div>
+    `;
     $(".js-add-user").append(html);
   }
   function addMember(userId) {
