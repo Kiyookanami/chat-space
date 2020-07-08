@@ -33,7 +33,7 @@ $(function() {
     let input = $("#user-search-field").val();
     $.ajax({
       type: "GET",
-      url: "/users",
+      url: "/users",  
       data: { keyword: input },
       dataType: "json"
     })

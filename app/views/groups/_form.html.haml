@@ -14,9 +14,6 @@
     .chat-group-form__field--left
       %label.chat-group-form__label{:for => "chat_group_チャットメンバーを追加"} チャットメンバーを追加
     .chat-group-form__field--right
-
-
-
       .chat-group-form__search.clearfix
         %input#user-search-field.chat-group-form__input{:placeholder => "追加したいユーザー名を入力してください", :type => "text"}/
       #user-search-result
@@ -25,8 +22,8 @@
     .chat-group-form__field--left
       %label.chat-group-form__label{:for => "chat_group_チャットメンバー"} チャットメンバー
     .chat-group-form__field--right
-
       #chat-group-users.js-add-user
+
         .chat-group-user.clearfix.js-chat-member
           %input{name: "group[user_ids][]", type: "hidden", value: current_user.id}
           %p.chat-group-user__nickname= current_user.nickname
@@ -35,8 +32,8 @@
           - if current_user.nickname!= user.nickname
             .chat-group-user.clearfix.js-chat-member
               %input{name: "group[user_ids][]", type: "hidden", value: user.id}
-              %p.chat-group-user__name
-                = user.nickname
+              %p.chat-group-user__name= user.nickname
+                
               
                
   .chat-group-form__field.clearfix
